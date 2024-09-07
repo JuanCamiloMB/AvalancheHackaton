@@ -1,14 +1,34 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sendTransaction } from '@/utils/transaction';
 
 export default function Page() {
   const [toAddress, setToAddress] = useState('');
   const [amount, setAmount] = useState('');
+  const [transactionState, setTransactionState] = useState(0) //0. Noting 1.try 2.sent 3.confirmed -1.Error
 
   const handleSend = async () => {
-    await sendTransaction(toAddress, amount);
+    await sendTransaction(toAddress, amount, setTransactionState);
   };
+
+  useEffect(()=>{
+    if(transactionState === 1){
+      //the user clicked the button send transaction
+      alert('Processing...')
+    }
+    if(transactionState === 2){
+      //transaction in process
+      alert('Processing...')
+    }
+    if(transactionState === 3){
+      //transaction succesfull
+      alert('DONE!')
+    }
+    if(transactionState === -1){
+      //error
+      alert('Error')
+    }
+  },[transactionState])
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white p-6">
