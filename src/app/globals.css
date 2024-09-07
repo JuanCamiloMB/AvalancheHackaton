@@ -25,3 +25,20 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "GeistVF";
+  src: url("/fonts/GeistVF.woff") format("woff");
+}
+@font-face {
+  font-family: "GeistMonoVF";
+  src: url("/fonts/GeistMonoVF.woff")
+}
+@font-face {
+  font-family: "GeneralSans";
+  src: url("fonts/GeneralSans-Variable.ttf")
+}
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("fonts/RedHatDisplay-Variable.ttf");
+}

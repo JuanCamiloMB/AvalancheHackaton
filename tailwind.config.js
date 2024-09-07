@@ -11,6 +11,11 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "general-sans": ["GeneralSans", "sans-serif"],
+        "geist-mono": ["GeistMonoVF", "sans-serif"],
+        "redhat-display": ["RedHatDisplay", "sans-serif"],
+      },
     },
   },
   plugins: [],
