@@ -12,6 +12,7 @@ export async function connectWallet() {
 
       const signer = await provider.getSigner();
       return signer;
+      //eooooooo
     } catch (error) {
       console.error("Error connecting to Core wallet:", error);
     }
